@@ -83,7 +83,7 @@ class MySyncClass:
 
 if __name__ == '__main__':
     try:
-        parser = argparse.ArgumentParser(prog='SyncFoldeContent.py', prefix_chars='-+')
+        parser = argparse.ArgumentParser(prog='SyncFolderContent.py', prefix_chars='-+')
         parser.add_argument('--sd', type=str, nargs='?', help='source directory')
         parser.add_argument('--rd', type=str, nargs='?', help='replica directory')
         parser.add_argument('--sync_period', type=int, nargs='?', help='sync periodicity in seconds')
