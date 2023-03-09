@@ -14,19 +14,21 @@ namespace ProcessMonitor
         {
             // Display the number of command line arguments.
             Console.WriteLine(args.Length);
+            StringBuilder sb = new StringBuilder();
 
             // Test if input arguments were supplied.
             if (args.Length == 0)
             {
                 Console.WriteLine("Please enter a process name.");
                 //throw new ArgumentNullException("Cannot be null or empty",args);
+                sb.Append("ERROR: Null number of the arguments");
             }
             else
             {
                 // The process name to monitor
                 string processName = args[0];
                 string logFilePath = args[3];
-                StringBuilder sb = new StringBuilder();
+
                 
                 // The threshold (in seconds) after which the process will be killed
                 int thresholdSeconds = 0;
@@ -44,6 +46,7 @@ namespace ProcessMonitor
                     Console.WriteLine("Usage: Factorial <num>");
                     //return 1;
                     //throw new ArgumentException("Cannot be null or empty", args[1]);
+                    sb.Append("ERROR: runTimeThreshold was not provided");
                 }
                 else
                 {
@@ -57,6 +60,7 @@ namespace ProcessMonitor
                     Console.WriteLine("Please enter a test time frequency.");
                     Console.WriteLine("Usage: Factorial <num>");
                     //throw new ArgumentException("Cannot be null or empty", args[2]);
+                    sb.Append("ERROR: TimeFrequency was not provided");
                 }
                 else
                 {
