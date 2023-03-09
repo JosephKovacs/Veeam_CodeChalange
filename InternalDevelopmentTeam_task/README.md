@@ -1,5 +1,5 @@
 
-To synchronizes two folders: 'source' and 'replica', please run the Python script as following:
+To synchronizes two folders: <strong>source</strong> and <strong>replica</strong>, please run the Python script as following:
 
 ```shell
 $ python SyncFolderContent.py --sd /path/to/source --rd /path/to/replica --sync_period 10 --logfile /path/to/logfile --verbosity 1
